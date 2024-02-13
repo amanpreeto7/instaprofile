@@ -116,23 +116,30 @@ class _SinglePostScreenState extends State<SinglePostScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: const Padding(
-        padding: EdgeInsets.symmetric(vertical: 20),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(Icons.home, size: 29),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0),
-              child: Icon(Icons.search, size: 29),
-            ),
-            Icon(Icons.add_box_outlined, size: 29),
-            Icon(Icons.slideshow, size: 29),
-            Icon(Icons.circle, size: 29),
-          ],
-        ),
-      ),
+      bottomNavigationBar:
+          BottomNavigationBar(backgroundColor: Colors.amber, items: [
+        BottomNavigationBarItem(
+            icon: Icon(Icons.home, size: 29), label: "Home"),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.home, size: 29), label: "Profile")
+      ]),
+      // bottomNavigationBar: const Padding(
+      //   padding: EdgeInsets.symmetric(vertical: 20),
+      //   child: Row(
+      //     crossAxisAlignment: CrossAxisAlignment.end,
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     children: [
+      //       Icon(Icons.home, size: 29),
+      //       Padding(
+      //         padding: EdgeInsets.symmetric(horizontal: 0),
+      //         child: Icon(Icons.search, size: 29),
+      //       ),
+      //       Icon(Icons.add_box_outlined, size: 29),
+      //       Icon(Icons.slideshow, size: 29),
+      //       Icon(Icons.circle, size: 29),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
